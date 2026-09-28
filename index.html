@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d1520">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>WORLD PYRAMID ELEVEN - MVP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="titleScreen" class="title-screen"></div>
+<div id="app">
+
+  <header class="top-bar">
+    <div class="brand">🏆 WORLD PYRAMID ELEVEN <span class="mvp-badge">MVP</span></div>
+    <div class="club-summary" id="clubSummary"></div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab-btn active" data-tab="dashboard">ダッシュボード</button>
+    <button class="tab-btn" data-tab="table">順位表</button>
+    <button class="tab-btn" data-tab="power">戦力表</button>
+    <button class="tab-btn" data-tab="cup">カップ戦</button>
+    <button class="tab-btn" data-tab="squad">スカッド</button>
+    <button class="tab-btn" data-tab="market">移籍市場</button>
+    <button class="tab-btn" data-tab="facilities">施設</button>
+    <button class="tab-btn" data-tab="coaches">コーチ</button>
+    <button class="tab-btn" data-tab="academy">アカデミー</button>
+    <button class="tab-btn" data-tab="affiliates">提携クラブ</button>
+    <button class="tab-btn" data-tab="sponsors">スポンサー</button>
+    <button class="tab-btn" data-tab="stats">スタッツ</button>
+  </nav>
+
+  <main id="content"></main>
+
+  <footer class="bottom-bar">
+    <div class="bottom-actions">
+      <button id="saveBtn" class="ghost-btn">セーブ</button>
+      <button id="titleBtn" class="ghost-btn">タイトルへ戻る</button>
+      <button id="newGameBtn" class="ghost-btn">このスロットを初期化</button>
+    </div>
+    <span class="save-indicator" id="saveIndicator"></span>
+  </footer>
+
+  <!-- スマホ専用: 常設アクションバー・下部ナビ(game.js で生成) -->
+  <div class="quick-bar" id="quickBar"></div>
+  <nav class="mobile-nav" id="mobileNav"></nav>
+
+</div>
+
+<div id="moreSheet" class="sheet-overlay hidden"></div>
+<div id="toast"></div>
+<div id="matchViewer" class="modal-overlay hidden"></div>
+<div id="seasonReviewModal" class="modal-overlay hidden"></div>
+<div id="decisionModal" class="modal-overlay hidden"></div>
+
+<script src="game.js"></script>
+</body>
+</html>
